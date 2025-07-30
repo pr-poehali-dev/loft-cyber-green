@@ -44,8 +44,10 @@ export default function Index() {
       <nav className="fixed top-0 w-full z-50 bg-cyber-dark/80 backdrop-blur-sm border-b border-electric/20">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-display font-bold text-electric cyber-text-shadow">
-              &lt;DevPortfolio/&gt;
+            <div className="text-2xl font-display font-bold text-electric cyber-text-shadow flex items-center">
+              <Icon name="TreePine" size={28} className="mr-2 text-neon-green" />
+              &lt;DevGarden/&gt;
+              <Icon name="Leaf" size={24} className="ml-2 text-electric" />
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="hover:text-electric transition-colors">О себе</a>
@@ -62,30 +64,57 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6">
-        <div className="container mx-auto text-center">
+      <section className="pt-24 pb-16 px-6 relative overflow-hidden">
+        {/* Decorative Plants */}
+        <div className="absolute top-0 left-0 w-32 h-64 opacity-20 animate-float">
+          <Icon name="TreePine" size={120} className="text-neon-green" />
+        </div>
+        <div className="absolute top-20 right-10 w-24 h-48 opacity-15 animate-float" style={{ animationDelay: '1s' }}>
+          <Icon name="Leaf" size={80} className="text-electric" />
+        </div>
+        <div className="absolute bottom-10 left-20 text-6xl opacity-25 animate-float" style={{ animationDelay: '2s' }}>
+          🌿
+        </div>
+        <div className="absolute bottom-20 right-20 text-5xl opacity-30 animate-float" style={{ animationDelay: '0.5s' }}>
+          🌳
+        </div>
+        
+        <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-6xl md:text-8xl font-display font-black mb-6 bg-gradient-to-r from-electric via-neon-green to-electric bg-clip-text text-transparent animate-float">
-              Full Stack
-            </h1>
+            <div className="flex items-center justify-center mb-6">
+              <Icon name="TreePine" size={60} className="text-neon-green mr-4 animate-cyber-glow" />
+              <h1 className="text-6xl md:text-8xl font-display font-black bg-gradient-to-r from-electric via-neon-green to-electric bg-clip-text text-transparent animate-float">
+                Full Stack
+              </h1>
+              <Icon name="Leaf" size={50} className="text-electric ml-4 animate-cyber-glow" />
+            </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 text-tech-gray">
-              Developer
+              Developer 🌱
             </h2>
             <p className="text-xl md:text-2xl mb-12 text-tech-gray/80 max-w-3xl mx-auto leading-relaxed">
               Создаю современные интернет-магазины на 1С Битрикс и веб-приложения с нуля. 
-              Специализируюсь на PHP разработке и полном цикле создания цифровых продуктов.
+              Как дерево растет от корней к вершине - так и я выращиваю проекты от идеи до запуска 🌳
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-electric text-black hover:bg-neon-green font-semibold px-8 py-4 text-lg animate-cyber-glow">
-                <Icon name="Rocket" size={20} className="mr-2" />
-                Начать проект
+                <Icon name="Sprout" size={20} className="mr-2" />
+                Прорастить проект
               </Button>
               <Button variant="outline" size="lg" className="border-electric text-electric hover:bg-electric/10 px-8 py-4 text-lg">
-                <Icon name="Eye" size={20} className="mr-2" />
-                Посмотреть работы
+                <Icon name="Trees" size={20} className="mr-2" />
+                Посмотреть сад работ
               </Button>
             </div>
           </div>
+        </div>
+
+        {/* Background Nature Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src="/img/daba464c-8edb-479e-8098-ded252b75423.jpg" 
+            alt="Green loft background" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
 
