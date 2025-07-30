@@ -61,7 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Cyberpunk Loft Colors
+				electric: '#00FF41',
+				'cyber-blue': '#16213E',
+				'deep-blue': '#0F3460',
+				'cyber-dark': '#2D2D2D',
+				'neon-green': '#39FF14',
+				'tech-gray': '#C0C0C0'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +91,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'cyber-glow': {
+					'0%, 100%': { boxShadow: '0 0 5px #00FF41' },
+					'50%': { boxShadow: '0 0 20px #00FF41, 0 0 30px #00FF41' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'cyber-glow': 'cyber-glow 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'fade-in-up': 'fade-in-up 0.6s ease-out'
 			}
 		}
 	},
